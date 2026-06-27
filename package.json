@@ -1,0 +1,11 @@
+{
+  "name": "porto",
+  "version": "1.0.0",
+  "scripts": {
+    "dev": "vite"
+  },
+  "dependencies": {
+    "three": "^0.185.0",
+    "vite": "^8.1.0"
+  }
+}
