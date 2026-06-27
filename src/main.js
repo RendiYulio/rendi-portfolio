@@ -11,7 +11,8 @@ const camera = new THREE.PerspectiveCamera(
   1000
 )
 
-camera.position.z = 8
+// Kamera agak mundur sedikit
+camera.position.z = 8.5
 
 const renderer = new THREE.WebGLRenderer({
   canvas: document.querySelector('#bg'),
@@ -46,11 +47,11 @@ loader.load(
 
     statue = gltf.scene
 
-    // PERBESAR PATUNG
-    statue.scale.set(6, 6, 6)
+    // PERKECIL PATUNG
+    statue.scale.set(4.8, 4.8, 4.8)
 
-    // POSISI PATUNG
-    statue.position.set(-5, -1, 0)
+    // GESER LEBIH KE KIRI
+    statue.position.set(-5.8, -1.1, 0)
 
     // ROTASI AWAL
     statue.rotation.y = 0.7
@@ -65,7 +66,7 @@ loader.load(
   }
 )
 
-// RENDER LOOP (TANPA AUTO ROTATE)
+// RENDER LOOP
 function animate() {
   requestAnimationFrame(animate)
   renderer.render(scene, camera)
@@ -73,12 +74,12 @@ function animate() {
 
 animate()
 
-// ROTATE HANYA SAAT SCROLL
+// ROTATE SAAT SCROLL (lebih pelan)
 window.addEventListener('scroll', () => {
   const scroll = window.scrollY
 
   if (statue) {
-    statue.rotation.y = 0.7 + scroll * 0.001
+    statue.rotation.y = 0.7 + scroll * 0.0007
   }
 })
 
