@@ -2,10 +2,13 @@
   "name": "porto",
   "version": "1.0.0",
   "scripts": {
-    "dev": "vite"
+    "dev": "vite",
+    "build": "vite build"
   },
   "dependencies": {
-    "three": "^0.185.0",
+    "three": "^0.185.0"
+  },
+  "devDependencies": {
     "vite": "^8.1.0"
   }
 }
