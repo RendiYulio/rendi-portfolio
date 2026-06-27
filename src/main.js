@@ -48,7 +48,7 @@ loader.load(
     statue = gltf.scene
 
     // PERKECIL PATUNG
-    statue.scale.set(7, 7, 7)
+    statue.scale.set(6, 6, 6)
 
     // GESER LEBIH KE KIRI
     statue.position.set(-5.8, -1.1, 0)
